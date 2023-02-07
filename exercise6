@@ -1,0 +1,9 @@
+#!/bin/bash
+
+input=( "$@" )
+
+output=$(./do_op $input)
+
+outputArray=(${output})
+
+echo The result of the do_op is ${outputArray[-1]}
