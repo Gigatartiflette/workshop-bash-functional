@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "The arguments are: "
+
+for var in "$@"
+do
+    echo "$var"
+
+done
+
