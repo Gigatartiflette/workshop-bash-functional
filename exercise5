@@ -1,0 +1,8 @@
+#!/bin/bash
+
+write_hello_world ()
+{
+    echo hello world
+}
+
+write_hello_world
