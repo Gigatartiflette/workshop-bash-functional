@@ -2,8 +2,11 @@
 
 input=( "$@" )
 
-output=$(./do_op $input)
+check_func()
+{
+    output=$(./do_op $input)
+    outputArray=(${output})
+    echo The result of the do_op is ${outputArray[-1]}
+}
 
-outputArray=(${output})
-
-echo The result of the do_op is ${outputArray[-1]}
+check_func "$input"
