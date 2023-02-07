@@ -1,0 +1,19 @@
+#!/bin/bash
+
+input=( "$@" )
+
+check=10
+
+expectation()
+{
+    output=$(./do_op $input)
+    outputArray=(${output})
+
+    if [ "${outputArray[-1]}" -ne "$check" ]; then
+        echo "expected "$check" got "${outputArray[-1]}""
+        exit 1
+    fi
+    echo "expected: " $check
+}
+
+expectation "$check"
